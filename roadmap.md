@@ -2,12 +2,13 @@
 
 ## in progress
 
-* [ ] Janet repl through serial
+* [ ] run on the esp32 a lambda function compiled on the laptop
 
 ## completed
 
-* [x] Janet runs on an esp32
+* [x] Janet repl through serial
 * [x] control builtin LED with Janet
+* [x] Janet runs on an esp32
 
 ## ideas
 
