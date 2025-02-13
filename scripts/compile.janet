@@ -19,4 +19,4 @@
       (pp g)
       (pp (g 3))
       (pp (disasm g)))
-    (error (string/join ["unknown step \"" step "\", expected compile or read"]))))
+    (error (string "unknown step \"" step "\", expected compile or read"))))
