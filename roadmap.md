@@ -2,10 +2,13 @@
 
 ## in progress
 
-* [ ] run on the esp32 a lambda function compiled on the laptop
+* [ ] reload function through http (one function for now)
 
 ## completed
 
+in reverse chronological order:
+
+* [x] run on the esp32 a lambda function compiled on the laptop
 * [x] Janet repl through serial
 * [x] control builtin LED with Janet
 * [x] Janet runs on an esp32

@@ -1,3 +1,8 @@
+/*
+runs a simple Janet repl over serial. All expressions are evaluated on the esp32.
+The functions `dw` and `delay` can be used to blink its built-in LED.
+*/
+
 #include <Arduino.h>
 #include <janet.h>
 #include <setjmp.h>
