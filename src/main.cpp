@@ -116,3 +116,5 @@ void loop() {
     }
   }
 }
+
+static const unsigned char bytes[] = {};

@@ -1,15 +1,18 @@
 # microJanet
 
-[The Janet programming language](https://github.com/janet-lang/janet) on the esp32.
+[The Janet programming language](https://github.com/janet-lang/janet) on an esp32 board.
 
-It uses a slightly modified Janet (no event loop, some modifications to source).
+It runs a slightly modified Janet (no event loop, some modifications to source) on the [Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) development board.
+Capabilities of the platform are provided as janet functions.
 
 ## Status & Roadmap
 
-`src/main.cpp` runs a Janet program that blinks the builtin LED. (Or more precisely, a C program that prepares a janet environment with bindings to Arduino/esp32 functions, and then runs in it a Janet program that blinks the builtin LED.)
+`src/main.cpp` runs a simple Janet repl over serial. All expressions are evaluated on the esp32. The functions `dw` and `delay` can be used to blink its built-in LED.
 
 For future goals, see [roadmap.md](roadmap.md).
 
 ## Why?
 
-Developing on an esp32 should be more interactive. I want to control it from a janet repl on another computer. I want to just say: "run this function on an esp32" and see the result 2 seconds later, not 20 seconds. This project is the first step towards such an environment.
+Developing on an esp32 should be more interactive. I want to say: "run this function on an esp32" and see the result 2 seconds later, not after half a minute.
+
+This project is the first step towards such an environment.
