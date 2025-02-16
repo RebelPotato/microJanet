@@ -2,7 +2,9 @@
 
 ## in progress
 
-* [ ] reload function through http (one function for now)
+* [ ] start and stop one task through serial
+* [ ] start and stop multiple tasks through serial
+* [ ] start and stop multiple tasks through http
 
 ## completed
 

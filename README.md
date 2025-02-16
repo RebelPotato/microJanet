@@ -7,9 +7,7 @@ Capabilities of the platform are provided as janet functions.
 
 ## Status & Roadmap
 
-`src/main.cpp` runs a Janet program that blinks the esp32's built-in LED. It is compiled on a host computer (see `host/make-fun.janet`), so it cannot access any data on the esp32, except for those passed as parameters. Safety through capabilities!
-
-`scripts/repl.cpp` runs a simple Janet repl over serial.
+`src/main.cpp` runs a Janet program that blinks the esp32's built-in LED. It is compiled on a host computer (see `host/make-fun.janet`), so it cannot access any data on the esp32, except for those passed as parameters. Safety through [capabilities](https://en.wikipedia.org/wiki/Object-capability_model)!
 
 For future goals, see [roadmap.md](roadmap.md).
 

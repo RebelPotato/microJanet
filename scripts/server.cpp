@@ -1,3 +1,8 @@
+/*
+runs a server on the esp32 that can load Janet programs from the host
+half done: I'm trying to figure out how to start and stop tasks
+*/
+
 #include <Arduino.h>
 #include <WebServer.h>
 #include <b64.h>
