@@ -5,7 +5,6 @@
 
 (defn blink [pin every]
   (fn [{:digital-write dw
-        :wait wait
         :rerun rerun} state]
     (dw pin state)
     (printf "Set pin %d to %d" pin state)
@@ -24,11 +23,16 @@
   (os/execute @[`curl` `-H` `Content-Type: text/plain` `-d` body `-X` method ip]
               :px))
 
+(defn init [{:digital-write dw
+            :delay delay
+            :pinmode pinmode}]
+  (pinmode LED-BUILTIN :output)
+  (delay 1000)
+  1)
+(def task (blink LED-BUILTIN 1000))
+
 (defn main [&]
-  (def task (blink LED-BUILTIN 1000))
-  (def initial-state 1)
+  (pp (disasm init))
   (pp (disasm task))
-  (def body (string (to-base64 initial-state) "  " (to-base64 task)))
-  (pp body)
-  (def res (request "POST" ip body))
-  (pp res))
+  (def body (string (to-base64 init) "  " (to-base64 task)))
+  (pp body))
